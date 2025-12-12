@@ -40,7 +40,8 @@ namespace LibYiroth.Scene
                 return false;
             }
 
-            saveManager.SaveVariable(levelID, "animekizi", transform.localPosition);
+            // NOTE: None of this save/load stuff works right now. IT IS INCOMPLETE.
+            saveManager.SaveVariable(levelID, "lastLocation", transform.localPosition);
             
             return true;
         }
