@@ -52,7 +52,7 @@ namespace LibYiroth.Scene
                 return false;
             }
 
-            if (saveManager.GetActiveGameSlot() == null)
+            if (!saveManager.IsCurrentGameSlotActive())
             {
                 Debug.LogError("Game Slot not found!");
                 return false;
@@ -66,6 +66,11 @@ namespace LibYiroth.Scene
 
         public bool OnLoading(Save.SaveManager saveManager)
         {
+            Vector3 lastLocation = transform.localPosition;
+            saveManager.LoadVariable<Vector3>(levelID, "lastLocation", ref lastLocation);
+            
+            this.gameObject.transform.position = lastLocation;
+            
             return false;
         }
     }
