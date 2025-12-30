@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Purpose: Dynamic game object identifier which can be interacted, processed, saved/loaded from a slot
+ * Purpose: A dynamic game object identifier which can be interacted, processed, saved/loaded from a slot
  */
 
 using LibYiroth;
